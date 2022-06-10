@@ -4,11 +4,13 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="./style.min.css")
+        link(rel="stylesheet", href="./style.css")
+        link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
         title Avantis Pump
     body 
         header.header 
         main.main 
+            .circle-container-greeting
             .main--greeting
                 .base-container 
                     .greeting-parent 
@@ -26,23 +28,179 @@ html(lang="en")
                 .base-container
                     .about-parent
                         img(src="./assets/images/content/globeGif.png", alt="").about-parent__image
-                        .about-parent__container 
+                        .about-parent__container(data-aos="fade-up") 
                             .about-parent__header Что такое Pump & Dump?
                             .about-parent__content Pump & Dump – манипулятивная схема повышения курса криптовалюты с последующим ценовым обвалом. Крупные владельцы активов искусственно повышают («накачивают», pump) их стоимость, чтобы впоследствии продать («сбросить», dump) максимально дорого мелким трейдерам. В результате стоимость актива снижается, а инвесторы теряют средства.
+            .circle-container-about
             .main--stock 
                 .stock-parent__animation-container 
                     img(src="./assets/images/content/stock.svg", alt="").stock-parent__stock-images
                 .base-container
                     .stock-parent
-                        .stock-parent__container 
+                        .stock-parent__container(data-aos="fade-up") 
                             .stock-parent__header Как работает pump&dump
                             .stock-parent__content 
                                 .stock-parent__par Выбрав биржу и монету, трейдеры Avantis скупают токены небольшими порциями, чтобы не спровоцировать преждевременный рост курса. Как правило, это малоизвестные криптовалюты с низкой капитализацией. Иногда для pump & dump используются и относительно крупные криптовалюты.
                                 .stock-parent__par После скупки токена начинается pump – его «накачка». В мессенджерах, новостных лентах, социальных сетях и биржевых чатах анонсируется скорый рост курса и сообщается название биржевой площадки. Котировки поднимаются. Это первая волна пампа.
                                 .stock-parent__par В случае успешной рекламной кампании начинается вторая волна пампа — приходят сторонние инвесторы, которые самостоятельно влияют на рост курса. На фоне ажиотажа цена растет, организаторы продают токены по завышенной стоимости, после чего курс криптовалюты возвращается к исходным показателям.
-                            .stock-parent__stock-screener 
-            
+                            .stock-parent__stock-screener      
             .main--process 
+                .base-container
+                    .process-parent 
+                        .process-parent__container
+                            .process-parent__header Как проходит работа? 
+                            .process-parent__slider-container 
+                                .process-parent__num#sliderNum 1
+                                .process-parent__content#sliderContent Регистрируетесь в нашем Telegram боте
+                            .process-parent__navigation
+                            .js-content.js--hidden 
+                                .js-value Регистрируетесь в нашем Telegram боте
+                                .js-value Пополняете личный кабинет 
+                                .js-value Регистрируетесь в нашем Telegram боте
+                                .js-value Пополняете личный кабинет 
+                                .js-value Регистрируетесь в нашем Telegram боте
+                                .js-value Пополняете личный кабинет 
+                        .process-parent__swiper 
+                            .swiper#processSwiper 
+                                .swiper-wrapper 
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+                                    .swiper-slide 
+                                       img(src="./assets/images/content/slide1.png").process-parent__image
+            .main--tarifs 
+                .base-container 
+                    .tarif-parent 
+                        .tarif-parent__row
+                            .tarif-parent__label 
+                                .tarif-parent__label-container 
+                                    .tarif-parent__subheader-label Средняя доходность
+                                    .tarif-parent__header-label 30-50%
+                                    .tarif-parent__caption за одну pump-сессию
+                            .tarif-parent__container
+                                .tarif-parent__header-main Тарифы
+                                .tarif-parent__content В зависимости от суммы депозита, компания забирает следующие %
+                        .tarif-parent__tabel 
+                            .tarif-parent__row 
+                                .tarif-parent__header Сумма инвестиций
+                                .tarif-parent__header Инвестор
+                                .tarif-parent__header Компания
+                                .tarif-parent__header Доходность инвестора 
+                                .tarif-parent__header 
+                            .tarif-parent__row 
+                                .tarif-parent__cell 500-2000
+                                .tarif-parent__cell 30%
+                                .tarif-parent__cell 70%
+                                .tarif-parent__cell 9-15%
+                                .tarif-parent__cell
+                            .tarif-parent__row 
+                                .tarif-parent__cell 2001-5000
+                                .tarif-parent__cell 50%
+                                .tarif-parent__cell 50%
+                                .tarif-parent__cell 15-25%
+                                .tarif-parent__cell
+                            .tarif-parent__row 
+                                .tarif-parent__cell 5001-25000
+                                .tarif-parent__cell 70%
+                                .tarif-parent__cell 30%
+                                .tarif-parent__cell 21-35%
+                                .tarif-parent__cell
+                            .tarif-parent__row 
+                                .tarif-parent__cell 25000 <
+                                .tarif-parent__cell 90%
+                                .tarif-parent__cell 10%
+                                .tarif-parent__cell 27-45%
+                                .tarif-parent__cell
+            .main--results 
+                .base-container 
+                    .results-parent 
+                        .results-parent__container 
+                            .results-parent__header Отчетность
+                            .results-parent__content Все отчеты Pump сессий в одном месте
+                        .results-parent__swiper 
+                            .swiper#resultSeiper 
+                                .swiper-wrapper 
+                                    .swiper-slide 
+                                        .results-parent__date 22.05.2022 г.
+                                        .results-parent__row 
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Количество монет
+                                                .results-parent__res_value 7%
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Средняя прибыль
+                                                .results-parent__res_value 18%
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Общая прибыль
+                                                .results-parent__res_value 17%
+                                    .swiper-slide 
+                                        .results-parent__date 23.05.2022 г.
+                                        .results-parent__row 
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Количество монет
+                                                .results-parent__res_value 7%
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Средняя прибыль
+                                                .results-parent__res_value 18%
+                                            .results-parent__parameter 
+                                                .results-parent__res_header Общая прибыль
+                                                .results-parent__res_value 17%
+                            .swiper-button-prev
+                            .swiper-button-next
+            .main--bonus 
+                .base-container 
+                    .bonus-parent 
+                        .bonus-parent__phone 
+                            img(src="./assets/images/content/bonusPhone.png", alt="")
+                            .bonus-parent__dialog
+                                a(href="#").bonus-parent__link Узнать подробнее 
+                        .bonus-parent__container 
+                            .bonus-parent__header Pump Bonus
+                            .bonus-parent__content Получай дополнительный доход благодаря Pump bonus.Моментальное начисление в личном кабинете 
+                            .bonus-parent__label 
+                                .bonus-parent__label-container
+                                    .bonus-parent__value 15%
+                                    .bonus-parent__caption от суммы депозита вашего реферала
+                            .bonus-parent__small-caption *Предупреждение. Пользователь, пригласивший по своей реферальной ссылке нового участника pump-сессии, может получить 15% только 1 раз, после первого внесения депозита новым участником. Количество приглашаемых участников – неограниченно. 
+                            .bonus-parent__payments 
+                                img(src="./assets/images/content/payments.png", alt="")
+            .circle-container-faq
+            .main--faq 
+                .base-container 
+                    .faq-parent 
+                        .faq-parent__image 
+                            img(src="./assets/images/content/questionMark.png", alt="")
+                        .faq-parent__container 
+                            .faq-parent__header FAQ
+                            .faq-parent__subheader Ответы на популярные вопросы
+                            .faq-parent__block
+                                .faq-parent__line 
+                                .faq-parent__question 
+                                    .faq-parent__content Какая доходность у компании?
+                                    .faq-parent__indicator 
+                                        span.faq-parent__cross.faq-parent__cross-to-remove 
+                                        span.faq-parent__cross 
+                                .faq-parent__answer Да, конечно, отрицательные pump-сессии бывают и, к сожалению, избежать их невозможно. Но мы всегда оцениваем и хеджируем риски, перед тем как начинать любую торговую сессию
+                            .faq-parent__block
+                                .faq-parent__line 
+                                .faq-parent__question 
+                                    .faq-parent__content Какая доходность у компании?
+                                    .faq-parent__indicator 
+                                        span.faq-parent__cross.faq-parent__cross-to-remove 
+                                        span.faq-parent__cross 
+                                .faq-parent__answer
+                                      .faq-parent__answer-content Да, конечно, отрицательные pump-сессии бывают и, к сожалению, избежать их невозможно. Но мы всегда оцениваем и хеджируем риски, перед тем как начинать любую торговую сессию
+
                 
 
         footer.footer
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+        script(src="./assets/js/main.min.js") 
